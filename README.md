@@ -2,6 +2,16 @@
 
 ![Minions cover](assets/minions.jpg)
 
+## Antes de empezar: algunos consejos
+
+El enunciado tiene **mucha** información, van a necesitar leerlo varias veces. La sugerencia es que lo lean entero una vez (para tener una idea general) y luego vuelvan a consultarlo las veces que hagan falta.
+
+Concentrensé en los requerimientos y, excepto que se traben mucho, respeten el orden sugerido. No es necesario que hagan TDD, pero sí sería interesante que vayan creando las distintas clases y métodos a medida que resuelven cada requerimiento y no antes. 
+
+En otras palabras: trabajen completando cada requerimiento antes de pasar al anterior, con los tests que aseguran que funciona incluidos. Si al avanzar en los requerimientos les parece necesario refactorizar, adelante, van a tener los tests que garantizan que no rompieron nada. :smirk: 
+
+## Descripción del dominio
+
 Una importante científica local nos pide que desarrollemos un programa que modele el comportamiento habitual de sus empleados, con el fin de organizar mejor la asignación de trabajo. Estos empleados, lejos de ser trabajadores normales, son unas criaturas genéticamente diseñadas por ella para adecuarse mejor a las distintas tareas que deben realizarse en su laboratorio.
 
 Según nos cuentan, existen dos razas de empleados: Bíclopes y Cíclopes.
