@@ -36,7 +36,7 @@ En cualquier momento, la científica podría ordenarle a cualquiera de sus emple
   
 A cualquier empleado puede ordenársele que realice **cualquier** tarea, independientemente de su raza o rol. En caso de cumplir con los requerimientos el empleado la realiza en el momento; de lo contrario debe lanzar un error ya que no puede hacer lo pedido.
 
-Para recuperar la estamina perdida, los empleados pueden comer una fruta. Las bananas recuperan 10 puntos, las manzanas 5 y las uvas 1. Por último, diremos que un empleado está contento si su nivel de estamina es de, al menos, 30 puntos.
+Para recuperar la estamina perdida, los empleados pueden comer una fruta. Las bananas recuperan 10 puntos, las manzanas 5 y las uvas 1. Por último, diremos que un empleado está contento si su nivel de estamina es de, al menos, 9 puntos.
 
 Enumeramos debajo las tareas posibles.
 
@@ -59,8 +59,8 @@ Defender un sector requiere que el empleado pueda aplicar una fuerza igual o may
 Los Bíclopes pueden aplicar toda su fuerza, mientras que los Ciclopes, por eso de que sólo impactan la mitad de los ataques, pueden aplicar solamente la mitad de su fuerza para defender un sector.
 
 Algunos ejemplos:
-* un Bíclope Soldado con 20 de estamina y 4 de daño extra tendrá una fuerza de 16 (`20 / 2 + 2 + 4`);
-* un Cíclope Soldado con los mismos valores tendrá una fuerza de 8;
+* un Bíclope Soldado con 10 de estamina y 4 de daño extra tendrá una fuerza de 11 (`10 / 2 + 2 + 4`);
+* un Cíclope Soldado con los mismos valores tendrá una fuerza de 5 (redondeamos para abajo);
 * un Cíclope Obrero con 20 de estamina tendrá una fuerza de 12 (`20 / 2 + 2`).
 
 Al defender un sector, los obreros pierden la mitad de su estamina y los soldados incrementan su daño extra en 2. Una vez defendido, su grado de amenaza queda en cero y deja de estar limpio, por los desmanes que ocasionó la batalla.
