@@ -83,12 +83,10 @@ Se pide implementar la solución a este problema en Kotlin, junto con los tests 
 1. Conocer la experiencia de un empleado, que se obtiene a partir de la cantidad de tareas realizadas multiplicada por la sumatoria de sus dificultades.
 1. Saber si un empleado puede realizar una tarea o no. Ojo, que para este requerimiento solo queremos ver _si podría_ hacerla, no pedimos que la haga. 
 1. Ahora sí, hacer que un empleado realice una tarea, teniendo en cuenta las restricciones descriptas anteriormente. Si no puede hacerla, debe lanzarse un error.
-  
-Agregar un nuevo rol: el Capataz, que se comporta de manera similar a un Obrero pero además tiene a su cargo a otros empleados. Tener en cuenta lo siguiente:
-
-* Cuando se le pide que haga algo, se lo delega a su subordinado con mayor nivel de experiencia de los que puedan realizar la tarea. Si no hay ninguno que pueda hacerla, debe hacerla él. Si él tampoco puede hacer la tarea, se arroja el error correspondiente.
-* Su experiencia es la suma de la experiencia de sus subordinados más la propia, que adquiere cuando a él le toca ejecutar alguna tarea.
-* Para saber si puede realizar una tarea, hay que mirar si alguno de sus subordinados puede hacerla o si él mismo puede hacerla.
+1. Agregar un nuevo rol: el Capataz, que se comporta de manera similar a un Obrero pero además tiene a su cargo a otros empleados. Tener en cuenta lo siguiente:
+  * Cuando se le pide que haga algo, se lo delega a su subordinado con mayor nivel de experiencia de los que puedan realizar la tarea. Si no hay ninguno que pueda hacerla, debe hacerla él. Si él tampoco puede hacer la tarea, se arroja el error correspondiente.
+  * Su experiencia es la suma de la experiencia de sus subordinados más la propia, que adquiere cuando a él le toca ejecutar alguna tarea.
+  * Para saber si puede realizar una tarea, hay que mirar si alguno de sus subordinados puede hacerla o si él mismo puede hacerla.
 
 Incorporar al modelo el Laboratorio, que conoce a todos los sectores, todos los empleados y a una lista de tareas pendientes. Debe poder responder a los siguientes requerimientos:
 
