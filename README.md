@@ -61,7 +61,7 @@ Los Bíclopes pueden aplicar toda su fuerza, mientras que los Ciclopes, por eso 
 Algunos ejemplos:
 * un Bíclope Soldado con 10 de estamina y 4 de daño extra tendrá una fuerza de 11 (`10 / 2 + 2 + 4`);
 * un Cíclope Soldado con los mismos valores tendrá una fuerza de 5 (redondeamos para abajo);
-* un Cíclope Obrero con 20 de estamina tendrá una fuerza de 12 (`20 / 2 + 2`).
+* un Cíclope Obrero con 20 de estamina tendrá una fuerza de 6 (`(20 / 2 + 2) / 2`).
 
 Al defender un sector, los obreros pierden la mitad de su estamina y los soldados incrementan su daño extra en 2. Una vez defendido, su grado de amenaza queda en cero y deja de estar limpio, por los desmanes que ocasionó la batalla.
 
