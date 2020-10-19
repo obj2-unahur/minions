@@ -16,7 +16,7 @@ Una importante científica local nos pide que desarrollemos un programa que mode
 
 Según nos cuentan, existen dos razas de empleados: Bíclopes y Cíclopes.
 
-**Los Bíclopes** tienen dos ojos, no tienen problemas para realizar ninguna tarea y su estamina está limitada a un máximo de 10 puntos.
+**Los Bíclopes** tienen dos ojos y su estamina está limitada a un máximo de 10 puntos.
 
 **Los Cíclopes** tienen un solo ojo, lo cual hace que les cueste bastante apuntar un arma: sólo aciertan la mitad de los disparos. No tienen límite a la estamina que pueden tener.
 
