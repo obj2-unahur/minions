@@ -79,7 +79,7 @@ Obviamente, luego de ser limpiado el sector debería quedar limpio (o en otras p
 
 Se pide implementar la solución a este problema en Kotlin, junto con los tests que prueben cada uno de los requerimientos.
 
-1. Que un empleado pueda comer una fruta para recuperar estamina. En el caso de los Bíclopes, la estamina no puede superar los 10 puntos, sin importar cuántas frutas se ingieran.
+1. Que un empleado pueda comer una fruta para recuperar estamina. En el caso de los Bíclopes, podrán absorber los beneficios de la fruta hasta llegar a 10 de estamina. Ejemplo: un Bíclope tiene 7 de experiencia, come una manzana, queda en 10. Luego come otra manzana, su estamina sigue en 10.
 1. Conocer la experiencia de un empleado, que se obtiene a partir de la cantidad de tareas realizadas multiplicada por la sumatoria de sus dificultades.
 1. Saber si un empleado puede realizar una tarea o no. Ojo, que para este requerimiento solo queremos ver _si podría_ hacerla, no pedimos que la haga. 
 1. Ahora sí, hacer que un empleado realice una tarea, teniendo en cuenta las restricciones descriptas anteriormente. Si no puede hacerla, debe lanzarse un error.
