@@ -12,9 +12,9 @@ En otras palabras: trabajen completando cada requerimiento antes de pasar al sig
 
 ## Descripción del dominio
 
-Una importante científica local nos pide que desarrollemos un programa que modele el comportamiento habitual de sus empleados, con el fin de organizar mejor la asignación de trabajo. Estos empleados, lejos de ser trabajadores normales, son unas criaturas genéticamente diseñadas por ella para adecuarse mejor a las distintas tareas que deben realizarse en su laboratorio.
+Una importante científica local nos pide que desarrollemos un programa que modele el comportamiento habitual de sus empleados, con el fin de organizar mejor la asignación de trabajo. Estos empleados, lejos de ser trabajadores normales, son unas criaturas genéticamente diseñadas por ella para adecuarse mejor a las distintas tareas que deben realizarse en su laboratorio: los minions.
 
-Según nos cuentan, existen dos razas de empleados: Bíclopes y Cíclopes.
+Según nos cuentan, existen dos razas de minions: Bíclopes y Cíclopes.
 
 **Los Bíclopes** tienen dos ojos y su estamina está limitada a un máximo de 10 puntos.
 
@@ -28,7 +28,7 @@ Los roles que existen son:
 * **Obrero** tienen un cinturón con varias herramientas (cada uno puede tener herramientas distintas).
 * **Limpiador** prefieren tener las manos limpias, así que van a negarse a defender sectores.
 
-En cualquier momento, la científica podría ordenarle a cualquiera de sus empleados que realice una tarea en el laboratorio. Cada una de estas tareas tiene:
+En cualquier momento, la científica podría ordenarle a cualquiera de sus minions que realice una tarea en el laboratorio. Cada una de estas tareas tiene:
 
 * una serie de **requerimientos** que el empleado debe cumplir para poder ejecutarla, 
 * una **dificultad**, que es un número entero,
@@ -36,7 +36,7 @@ En cualquier momento, la científica podría ordenarle a cualquiera de sus emple
   
 A cualquier empleado puede ordenársele que realice **cualquier** tarea, independientemente de su raza o rol. En caso de cumplir con los requerimientos el empleado la realiza en el momento; de lo contrario debe lanzar un error ya que no puede hacer lo pedido.
 
-Para recuperar la estamina perdida, los empleados pueden comer una fruta. Las bananas recuperan 10 puntos, las manzanas 5 y las uvas 1. Por último, diremos que un empleado está contento si su nivel de estamina es de, al menos, 9 puntos.
+Para recuperar la estamina perdida, los minions pueden comer una fruta. Las bananas recuperan 10 puntos, las manzanas 5 y las uvas 1. Por último, diremos que un empleado está contento si su nivel de estamina es de, al menos, 9 puntos.
 
 Enumeramos debajo las tareas posibles.
 
@@ -48,7 +48,7 @@ Para poder arreglar una máquina hay dos requerimientos:
 * tener tanta estamina como complejidad tenga la máquina, 
 * tener las herramientas necesarias para arreglarla. Nótese que si la máquina no requiere de ninguna herramienta, cualquier empleado con estamina suficiente puede arreglarla.
 
-Trabajar en una máquina es agotador, así que los empleados pierden tantos puntos de estamina como complejidad de la máquina al arreglarla. La dificultad para este tipo de tareas es el doble de la complejidad de la máquina.
+Trabajar en una máquina es agotador, así que los minions pierden tantos puntos de estamina como complejidad de la máquina al arreglarla. La dificultad para este tipo de tareas es el doble de la complejidad de la máquina.
 
 ### Defender un sector
 
@@ -69,7 +69,7 @@ La dificultad de esta tarea es el grado de amenaza para los Bíclopes y el doble
 
 ### Limpiar un sector
 
-Ocasionalmente el laboratorio se ensucia y depende de los empleados mantenerlo en orden. La dificultad de este tipo de tareas es de 10 puntos, pero el sistema tiene que contemplar la posibilidad de cambiar este valor para _todas_ las tareas a la vez.
+Ocasionalmente el laboratorio se ensucia y depende de los minions mantenerlo en orden. La dificultad de este tipo de tareas es de 10 puntos, pero el sistema tiene que contemplar la posibilidad de cambiar este valor para _todas_ las tareas a la vez.
 
 Para poder limpiar un sector se requiere tener al menos 4 puntos de estamina si es grande y 1 si no lo es. Al limpiar se pierde la estamina requerida para limpiar el sector, a menos que el empleado tenga rol de limpiador. Los limpiadores siempre pueden limpiar (se saltean el chequeo de los puntos de estamina) y no pierden estamina al hacerlo.
 
@@ -83,16 +83,16 @@ Se pide implementar la solución a este problema en Kotlin, junto con los tests 
 1. Conocer la experiencia de un empleado, que se obtiene a partir de la cantidad de tareas realizadas multiplicada por la sumatoria de sus dificultades.
 1. Saber si un empleado puede realizar una tarea o no. Ojo, que para este requerimiento solo queremos ver _si podría_ hacerla, no pedimos que la haga. 
 1. Ahora sí, hacer que un empleado realice una tarea, teniendo en cuenta las restricciones descriptas anteriormente. Si no puede hacerla, debe lanzarse un error.
-1. Agregar un nuevo rol: el Capataz, que se comporta de manera similar a un Obrero pero además tiene a su cargo a otros empleados. Tener en cuenta lo siguiente:
+1. Agregar un nuevo rol: el Capataz, que se comporta de manera similar a un Obrero pero además tiene a su cargo a otros minions. Tener en cuenta lo siguiente:
   * Cuando se le pide que haga algo, se lo delega a su subordinado con mayor nivel de experiencia de los que puedan realizar la tarea. Si no hay ninguno que pueda hacerla, debe hacerla él. Si él tampoco puede hacer la tarea, se arroja el error correspondiente.
   * Su experiencia es la suma de la experiencia de sus subordinados más la propia, que adquiere cuando a él le toca ejecutar alguna tarea.
   * Para saber si puede realizar una tarea, hay que mirar si alguno de sus subordinados puede hacerla o si él mismo puede hacerla.
 
-Incorporar al modelo el Laboratorio, que conoce a todos los sectores, todos los empleados y a una lista de tareas pendientes. Debe poder responder a los siguientes requerimientos:
+Incorporar al modelo el Laboratorio, que conoce a todos los sectores, todos los minions y a una lista de tareas pendientes. Debe poder responder a los siguientes requerimientos:
 
-6. Poder determinar si está en orden: esto es así si todos sus sectores están limpios, sin amenazas y todos sus empleados están contentos.
-7. Ejecutar una jornada laboral, haciendo que los empleados realicen todas las tareas pendientes. Para cada tarea, se elige a cualquiera de los empleados que pueda realizarla y una vez completada se la saca de la lista. Si quedan tareas pendientes que nadie pudo resolver, arrojar un error.
+6. Poder determinar si está en orden: esto es así si todos sus sectores están limpios, sin amenazas y todos sus minions están contentos.
+7. Ejecutar una jornada laboral, haciendo que los minions realicen todas las tareas pendientes. Para cada tarea, se elige a cualquiera de los minions que pueda realizarla y una vez completada se la saca de la lista. Si quedan tareas pendientes que nadie pudo resolver, arrojar un error.
 
 ## Créditos
 
-Enunciado original creado por Mariana Matos y Nicolás Scarcella para UTN - FRBA. Redacción modificada por Carlos Lombardi para UNQ - locación General Belgrano. Transformado a Markdown, reformateado y agregado de nuevos requerimientos por Federico Aloi para UNaHur.
+Enunciado original creado por Mariana Matos y Nicolás Scarcella para UTN - FRBA, con ajustes de redacción por Carlos Lombardi para UNQ - locación General Belgrano. Transformado a Markdown, reformateado, reorganizado el texto y agregados nuevos requerimientos por Federico Aloi para UNaHur.
