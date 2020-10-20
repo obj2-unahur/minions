@@ -24,7 +24,7 @@ También sabemos que, en el laboratorio, cada empleado tiene asignado un rol. Es
 
 Los roles que existen son:
 
-* **Soldado** están equipados con un arma que les facilita la defensa del laboratorio. Cada vez que un soldado usa su arma para defender un sector, gana práctica y se vuelve un poquito mejor con ella, incrementando en 2 el daño que causa. Si por algún motivo el soldado cambia de rol, toda la práctica ganada se pierde.
+* **Soldado** están equipados con un arma que les facilita la defensa del laboratorio. Cada vez que usan su arma para defender un sector, gana práctica y se vuelve un poquito mejor con ella, incrementando en 2 el daño que causa. Si por algún motivo el soldado cambia de rol, toda la práctica ganada se pierde. Cuando a un minion se le asigna un rol de Soldado, el daño extra comienza en 0.
 * **Obrero** tienen un cinturón con varias herramientas (cada uno puede tener herramientas distintas).
 * **Limpiador** prefieren tener las manos limpias, así que van a negarse a defender sectores.
 
